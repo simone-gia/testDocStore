@@ -1,6 +1,13 @@
 <div style="max-width: 1200px; margin: auto">
-  <h1>hello</h1>
   <h1 class="c-heading-1" style="color: #000000">Looking for help?</h1>
-  <h1 class="c-subheading-1" style="color: #000000">You've come to the right place.</h1>
-  <h2 class="c-heading-2" style="color: #000000; margin-top: 75px">Common Questions</h2>
-</div>
+  <h1 class="c-subheading-1" style="color: #000000">You've come to the right place.</h1>
+  <h2 class="c-heading-2" style="color: #000000; margin-top: 75px">Common Questions</h2>
+  <div><button class="c-button accordion theme-light">OpenSSL issues when trying to get .NET Core working with OS X</button></div>
+  <div class="panel"><p class="c-paragraph-2">As identified in <a class="inlineHyperlink" href="https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md" target="_blank">.NET Core's known issues</a>, OS X 10.11 has a pre-installed version of OpenSSL which is not supported by .NET Core. In order to satisfy the OpenSSL dependency using <a class="inlineHyperlink" href="http://brew.sh/index.html" target="_blank">Homebrew</a> run the following commands:</p></div>
+  <div copy class="codeSnippet" style="padding-bottom: 20px">
+      <pre class="line-numbers language-ruby" data-src="~/Resources/CodeSnippets/Help/CommonIssues1.html"></pre>
+  </div>
+  <div class="panel"><p class="c-paragraph-2">Sometimes this may not completely fix the problem. If so, run this more extensive set of commands: </p></div>
+  <div copy class="codeSnippet" style="padding-bottom: 20px">
+    <pre class="line-numbers language-ruby" data-src="~/Resources/CodeSnippets/Help/CommonIssues2.html"></pre>
+  </div>
