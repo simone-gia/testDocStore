@@ -1,0 +1,34 @@
+<div data-grid="col-10">
+        <div class="documentation">
+            <h2 class="c-heading-2">@Model.Strings.Docs_Web_Title</h2>
+            <p class="c-paragraph-2">@Model.Strings.Docs_Summary_Para1</p>
+            <h4 class="c-heading-3">@Model.Strings.Docs_Step1_Title</h4>
+            <p class="c-paragraph-2">@Model.Strings.Docs_Step1_Description_Para1</p>
+            <a href="@Url.Content("~/portal/quickstart/javascript")" id="register-web-app-btn" class="c-call-to-action c-glyph">
+                <span>@Model.Strings.Docs_RegisterApp_Button</span>
+            </a>
+            <h4 class="c-heading-3">@Model.Strings.Docs_Step2_Title</h4>
+            <p class="c-paragraph-2">@Html.Raw(@Model.Strings.Docs_Web_Step2_Description)</p>
+            <div copy class="codeSnippet">
+                <pre class="line-numbers language-markup" data-src="@Url.Content("~/Resources/CodeSnippets/Web/signInSnippet.html")"></pre>
+            </div>
+            <h4 class="c-heading-3">@Model.Strings.Docs_Web_Step3_Title</h4>
+            <p class="c-paragraph-2">@Html.Raw(@Model.Strings.Docs_Web_Step3_Description)</p>
+            <div copy class="codeSnippet">
+                <pre class="line-numbers language-markup" data-src="@Url.Content("~/Resources/CodeSnippets/Web/loginButtonSnippet.html")"></pre>
+            </div>
+            <h4 class="c-heading-3">@Model.Strings.Docs_Web_Step4_Title</h4>
+                <p class="c-paragraph-2 f-lean">@Html.Raw(@Model.Strings.Docs_Web_Step4_Description)</p>
+                <div class="note">
+                    <div class="noteIcon"><img class="c-image" src="@Url.Content("~/Resources/Images/Docs/icon__note_info.png")"></div>
+                    <p class="noteText c-paragraph-2">@Html.Raw(@Model.Strings.Docs_Summary_Para2)</p>
+                </div>
+                <div class="note">
+                    <div class="noteIcon"><img class="c-image" src="@Url.Content("~/Resources/Images/Docs/icon__note_warning.png")"></div>
+                    <p class="noteText c-paragraph-2">@Model.Strings.Docs_Step5_Note</p>
+                </div>
+            <feedback-control></feedback-control>
+        <h4 class="c-heading-3">@Model.Strings.Docs_Web_NextSteps_Title</h4>
+        <p class="c-paragraph-2">@Model.Strings.Docs_NextSteps_Description<a class="inlineHyperlink" href="#" onclick="languagePicker.navigate('@Url.Content("~/Docs/BackendService/")', 'javascript')">@Model.Strings.Docs_LearnMoreHereLink</a></p>
+    </div>
+    </div>
