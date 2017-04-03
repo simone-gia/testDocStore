@@ -1,29 +1,35 @@
-<h2 class="c-heading-2">@Model.Strings.Docs_Web_Title</h2>
-<p class="c-paragraph-2">@Model.Strings.Docs_Summary_Para1</p>
-<h4 class="c-heading-3">@Model.Strings.Docs_Step1_Title</h4>
-<p class="c-paragraph-2">@Model.Strings.Docs_Step1_Description_Para1</p>
+<h2 class="c-heading-2">Getting Started: Web</h2>
+<p class="c-paragraph-2">The following steps allow you to quickly sign in users to your application using their work or school accounts.
+</p>
+<h4 class="c-heading-3">1. Register an app to get a client ID</h4>
+<p class="c-paragraph-2">Register your app to get a client ID and access a personalized version of these instructions. If you already have a client ID for an app with the implicit flow enabled you can skip to the next step.
+</p>
 <a href="@Url.Content("~/portal/quickstart/javascript")" id="register-web-app-btn" class="c-call-to-action c-glyph">
-  <span>@Model.Strings.Docs_RegisterApp_Button</span>
+  <span>Register your app</span>
 </a>
-<h4 class="c-heading-3">@Model.Strings.Docs_Step2_Title</h4>
-<p class="c-paragraph-2">@Html.Raw(@Model.Strings.Docs_Web_Step2_Description)</p>
+<h4 class="c-heading-3">2. Set up the SDK</h4>
+<p class="c-paragraph-2">Copy and paste the following snippet of code into the <head> tag of your HTML file.  Then set the value of the clientId and redirectUri variables to your application's corresponding values.
+</p>
 <div copy class="codeSnippet">
   <pre class="line-numbers language-markup" data-src="@Url.Content("~/Resources/CodeSnippets/Web/signInSnippet.html")"></pre>
 </div>
-<h4 class="c-heading-3">@Model.Strings.Docs_Web_Step3_Title</h4>
-<p class="c-paragraph-2">@Html.Raw(@Model.Strings.Docs_Web_Step3_Description)</p>
+<h4 class="c-heading-3">3. Add a button to sign in</h4>
+<p class="c-paragraph-2">Copy and paste the following snippet of code directly into the <body> of your HTML file.
+</p>
 <div copy class="codeSnippet">
   <pre class="line-numbers language-markup" data-src="@Url.Content("~/Resources/CodeSnippets/Web/loginButtonSnippet.html")"></pre>
 </div>
-<h4 class="c-heading-3">@Model.Strings.Docs_Web_Step4_Title</h4>
-<p class="c-paragraph-2 f-lean">@Html.Raw(@Model.Strings.Docs_Web_Step4_Description)</p>
+<h4 class="c-heading-3">4. Try it out</h4>
+<p class="c-paragraph-2 f-lean">Load the resulting page/HTML using your HTTP server of choice (in this example we used node.js and http-server). Then click the button to launch a popup that will authenticate the user. After completing authentication, the SDK will provide your application with information about the user who authenticated based on the contents of the token via the getCachedUser method (see “showWelcomeMessage” above) and write the token to the console.
+</p>
 <div class="note">
   <div class="noteIcon"><img class="c-image" src="@Url.Content("~/Resources/Images/Docs/icon__note_info.png")"></div>
-  <p class="noteText c-paragraph-2">@Html.Raw(@Model.Strings.Docs_Summary_Para2)</p>
+  <p class="noteText c-paragraph-2">In order to test your application, you will need at least one work account (such as an Office 365 Subscription or Azure Active Directory user account). You can learn how to create one here.</p>
 </div>  <div class="note">
   <div class="noteIcon"><img class="c-image" src="@Url.Content("~/Resources/Images/Docs/icon__note_warning.png")"></div>
-  <p class="noteText c-paragraph-2">@Model.Strings.Docs_Step5_Note</p>
+  <p class="noteText c-paragraph-2">At this point the token has not been validated.  The token must be validated before you can use it to access services or data that you control.</p>
 </div>
 <feedback-control></feedback-control>
-<h4 class="c-heading-3">@Model.Strings.Docs_Web_NextSteps_Title</h4>
-<p class="c-paragraph-2">@Model.Strings.Docs_NextSteps_Description<a class="inlineHyperlink" href="#" onclick="languagePicker.navigate('@Url.Content("~/Docs/BackendService/")', 'javascript')">@Model.Strings.Docs_LearnMoreHereLink</a></p>
+<h4 class="c-heading-3">Next Steps</h4>
+<p class="c-paragraph-2">Call your application’s backend service/API to validate the token and authenticate users to your backend service.  Learn more here
+<a class="inlineHyperlink" href="#" onclick="languagePicker.navigate('@Url.Content("~/Docs/BackendService/")', 'javascript')">@Model.Strings.Docs_LearnMoreHereLink</a></p>
