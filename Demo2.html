@@ -1,0 +1,32 @@
+<section data-grid="col-12">
+    <h4 class="c-heading-4">Add sign in logic</h4>
+    <p class="c-paragraph-2">Copy and paste the following code into your activity's *.java file where you would like the
+        sign in flow</p>
+    <div>
+        <pre class="line-numbers language-java"><code>
+        compile('com.microsoft.aad:adal:1.2.+') {
+            exclude group: 'com.android.support'
+        }
+        </code>
+        </pre>
+    </div>
+    <p class="c-paragraph-2">In the same file, copy and paste the following configurations into your Java class outside
+        of any method.</p>
+    <p class="c-paragraph-2">In the same file, copy and paste the following method below
+        <span class="inlineCode">onCreate(....)</span>.
+    </p>
+    <h4 class="c-heading-4">Add a button for sign in</h4>
+    <p class="c-paragraph-2">Copy and paste the following snippet of code into the activity's *.xml layout.</p>
+    <div class="codeSnippet">
+        <pretty-code [code]="buttonCode" [language]="'markup'"></pretty-code>
+    </div>
+    <h4 class="c-heading-4">Try it out</h4>
+    <p class="c-paragraph-2">Build and run your application. Then click the button to launch a browser window that will
+        authenticate the user. After completing authentication, the SDK will provide you with information about the user
+        who authenticated based on the contents of the token provided by Microsoft.</p>
+    <div class="note">
+        <div class="noteIcon"><img class="c-image" src="/Resources/Images/Docs/icon__note_warning.png"></div>
+        <p class="noteText c-paragraph-2">At this point the token has not been validated.
+            The token must be validated before you can use it to access services or data that you control.</p>
+    </div>
+</section>
