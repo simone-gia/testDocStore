@@ -4,14 +4,29 @@
         sign in flow</p>
     <div>
         <pre class="line-numbers language-java"><code>
-        compile('com.microsoft.aad:adal:1.2.+') {
-            exclude group: 'com.android.support'
-        }
+compile('com.microsoft.aad:adal:1.2.+') {
+    exclude group: 'com.android.support'
+}
         </code>
         </pre>
     </div>
     <p class="c-paragraph-2">In the same file, copy and paste the following configurations into your Java class outside
         of any method.</p>
+    <div>
+        <pre class="line-numbers language-java">
+        <code>
+/* Configurations */
+
+public final static String CLIENT_ID = "198b84a0-bbe9-4080-bc91-66735221fb46"; //This is your client ID
+public final static String REDIRECT_URI = "http://localhost"; //This is your redirect URI
+public final static String AUTHORITY_URL = "https://login.microsoftonline.com/common";  //COMMON OR YOUR TENANT ID
+private final static String AUTH_TAG = "auth"; // Search "auth" in your Android Monitor to see errors
+private AuthenticationContext mAuthContext;
+        </code>
+        </pre>
+    </div>
+    
+    
     <p class="c-paragraph-2">In the same file, copy and paste the following method below
         <span class="inlineCode">onCreate(....)</span>.
     </p>
