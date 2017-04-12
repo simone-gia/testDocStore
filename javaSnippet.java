@@ -1,0 +1,10 @@
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.util.Log;
+import android.widget.TextView;
+import android.view.View;
+import com.microsoft.aad.adal.AuthenticationCallback;
+import com.microsoft.aad.adal.AuthenticationContext;
+import com.microsoft.aad.adal.AuthenticationResult;
+import com.microsoft.aad.adal.PromptBehavior;
