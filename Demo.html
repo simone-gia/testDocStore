@@ -2,6 +2,15 @@
     <h4 class="c-heading-4">Add sign in logic</h4>
     <p class="c-paragraph-2">Copy and paste the following code into your activity's *.java file where you would like the
         sign in flow.</p>
+    <div>
+        <pre class="line-numbers language-markup">
+        <code>
+        compile('com.microsoft.aad:adal:1.2.+') {
+            exclude group: 'com.android.support'
+        }
+        </code>
+        </pre>
+    </div>
     <p class="c-paragraph-2">In the same file, copy and paste the following configurations into your Java class outside
         of any method.</p>
     <p class="c-paragraph-2">In the same file, copy and paste the following method below
